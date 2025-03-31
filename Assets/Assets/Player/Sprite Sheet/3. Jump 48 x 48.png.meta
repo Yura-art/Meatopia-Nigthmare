@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f3fb5d4b6c39f76458bc2395517c4214
+guid: b141cf07995ef6a4d98aca3b0e5058f0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,198 +119,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slide_0
+      name: 3. Jump 48 x 48_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 128
-        width: 28
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72b25d95334d5f342b8cf22e381ae8e2
-      internalID: 252750801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slide_1
-      rect:
-        serializedVersion: 2
-        x: 182
-        y: 127
-        width: 27
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 995d3b53ba860c44ca55dda368a73200
-      internalID: -1572108044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slide_2
-      rect:
-        serializedVersion: 2
-        x: 312
-        y: 128
-        width: 39
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d779b107d403ed44d8ad09bf49711069
-      internalID: -468268191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slide_3
-      rect:
-        serializedVersion: 2
-        x: 439
-        y: 128
-        width: 41
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 706f7ff559ce9984886970bd898ed850
-      internalID: -1072562690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slide_4
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 64
-        width: 41
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a3b2d28e46b13348b4dcdfb75fd3fe5
-      internalID: 804632245
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slide_5
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 64
-        width: 41
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7eee471545b0bf84d9200dc8d49f842b
-      internalID: -826954005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slide_6
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 64
-        width: 41
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30ab7604df9dc7041abe2a41bbf1647d
-      internalID: -1546252372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slide_7
-      rect:
-        serializedVersion: 2
-        x: 440
-        y: 64
-        width: 40
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f472d5e80d455f241b165027c4aa8e6f
-      internalID: 1283477250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slide_8
-      rect:
-        serializedVersion: 2
-        x: 57
+        x: 0
         y: 0
-        width: 38
-        height: 24
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a640635196b94e74c8b19e6a5f9a766e
-      internalID: 588348370
+      spriteID: bb3f94d0778854b4d8769d0e4b0b750e
+      internalID: -905966315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slide_9
+      name: 3. Jump 48 x 48_1
       rect:
         serializedVersion: 2
-        x: 181
+        x: 48
         y: 0
-        width: 20
-        height: 40
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,8 +158,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72535e2082c196843b6783d979c74520
-      internalID: -154424925
+      spriteID: 4cc8dafe3983256478f569b51c26c3c3
+      internalID: -2036920115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. Jump 48 x 48_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24f2bd1a68abb74c8a8442d124caafb
+      internalID: 1284066443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3. Jump 48 x 48_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290b0c403f35cde4e8601580ed781eae
+      internalID: 524910865
       vertices: []
       indices: 
       edges: []
@@ -356,16 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slide_0: 252750801
-      Slide_1: -1572108044
-      Slide_2: -468268191
-      Slide_3: -1072562690
-      Slide_4: 804632245
-      Slide_5: -826954005
-      Slide_6: -1546252372
-      Slide_7: 1283477250
-      Slide_8: 588348370
-      Slide_9: -154424925
+      3. Jump 48 x 48_0: -905966315
+      3. Jump 48 x 48_1: -2036920115
+      3. Jump 48 x 48_2: 1284066443
+      3. Jump 48 x 48_3: 524910865
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aae0f51898a80ab4fb9f3573a961f0a0
+guid: e82b2f81706673a4bb7d6d1dc0ce3068
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,30 +119,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
+      name: 4. Fall 48 x 48_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 192
-        width: 28
-        height: 44
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,125 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 765357e7c441e684d9886436a63f244b
-      internalID: -305081100
+      spriteID: fe2a416229b92e9458020c075c56244b
+      internalID: -1189110307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_1
-      rect:
-        serializedVersion: 2
-        x: 175
-        y: 193
-        width: 32
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94d49c8236ee20241b55bb35daa9e1ca
-      internalID: 439559182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_2
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 131
-        width: 27
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e64430cd626b69e4baa8559852d1585b
-      internalID: -1681364422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_3
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 132
-        width: 31
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2749f383efc28ad4b8a19aa0becfac5b
-      internalID: 616254984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_4
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 66
-        width: 32
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcfda19cf48ebcf4994ac778f54bca1a
-      internalID: 658222164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_5
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 64
-        width: 28
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed60c7056a32d49438b7b7634fd01286
-      internalID: 949589747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_6
+      name: 4. Fall 48 x 48_1
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 28
-        height: 41
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60ddfa9bb1139e148b78f80cd4ca02ac
-      internalID: -1115293800
+      spriteID: 57978355e4735b7469951ad75bb2c80a
+      internalID: -950633516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_7
+      name: 4. Fall 48 x 48_2
       rect:
         serializedVersion: 2
-        x: 176
+        x: 96
         y: 0
-        width: 29
-        height: 45
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,8 +179,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41c07a840483450498eadd539327e1e2
-      internalID: 1586814048
+      spriteID: aa64ccd4d41c42942b560ae3d64558ad
+      internalID: -326761168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4. Fall 48 x 48_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab44e43259ca5e94a8ced103e1afa25d
+      internalID: -238008733
       vertices: []
       indices: 
       edges: []
@@ -314,14 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump_0: -305081100
-      Jump_1: 439559182
-      Jump_2: -1681364422
-      Jump_3: 616254984
-      Jump_4: 658222164
-      Jump_5: 949589747
-      Jump_6: -1115293800
-      Jump_7: 1586814048
+      4. Fall 48 x 48_0: -1189110307
+      4. Fall 48 x 48_1: -950633516
+      4. Fall 48 x 48_2: -326761168
+      4. Fall 48 x 48_3: -238008733
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

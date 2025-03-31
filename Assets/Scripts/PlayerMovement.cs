@@ -4,15 +4,98 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    float horizontalValue;
+    SpriteRenderer sprt;
+    Animator anim;
+    Rigidbody2D rb;
+    private bool isGrounded;
+    private bool isJumping;
+
+    public LayerMask groundLayer;
+    public Transform groundCheck;
+    public float groundRadius = 0.2f;
+
+    [SerializeField] float speed;
+    [SerializeField] float jumpForce;
+
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sprt = GetComponent<SpriteRenderer>();
+
+
+       
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        horizontalValue = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(horizontalValue * speed, rb.velocity.y);
+
+        // Manejo de animaciones
+        anim.SetFloat("Speed", Mathf.Abs(horizontalValue));
+        anim.SetFloat("YVelocity", rb.velocity.y);
+        anim.SetBool("IsFalling", !isGrounded && rb.velocity.y < 0);
+
+        if (horizontalValue != 0)
+        {
+            transform.localScale = new Vector3(Mathf.Sign(horizontalValue), 1, 1);
+        }
+
+        Jump();
+        Attack();
+        Flip();
     }
+    private void FixedUpdate()
+    {
+        // Detectar Suelo
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+        anim.SetBool("IsGrounded", isGrounded);
+    }
+
+    public void Jump()
+    {
+
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        //anim.SetBool("IsGrounded", isGrounded);
+
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            anim.SetTrigger("Jump");
+        }
+
+    }
+
+    public void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            anim.SetTrigger("Attack");
+        }
+    }
+    public void Flip()
+    {
+        if (horizontalValue > 0 && sprt.flipX == true || horizontalValue < 0 && sprt.flipX == false)
+        {
+            sprt.flipX = !sprt.flipX;
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        // Verifica si groundCheck no es nulo
+        if (groundCheck != null)
+        {
+            // Establece el color del Gizmo (puedes cambiarlo si quieres)
+            Gizmos.color = Color.red;
+
+            // Dibuja un círculo (WireSphere) en la posición de groundCheck con el radio de detección
+            Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
+        }
+    }
+
 }
