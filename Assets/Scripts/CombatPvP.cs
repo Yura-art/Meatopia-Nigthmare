@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class CombatPvP : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+
+    [SerializeField] float daño;
+
+    public GameObject radiumDamage;
+
+
     void Start()
     {
         
