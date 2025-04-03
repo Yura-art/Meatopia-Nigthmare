@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] Rigidbody2D rb;
     private bool isGrounded;
-    private bool isJumping;
+    //private bool isJumping;
 
     public LayerMask groundLayer;
     public Transform groundCheck;
@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     private float originalSpeed;
     private bool isDashing = false;
     private float dashTime;
+    Collider2D Collision;
+
+    [SerializeField] List<string> tagsPermitidos;
 
     //Parametros del dash
     public float dashSpeed = 15f;
@@ -33,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprt = GetComponent<SpriteRenderer>();
+        //Collision = GetComponent<Collider2D>();
 
         originalSpeed = speed;
 
@@ -99,16 +103,43 @@ public class PlayerMovement : MonoBehaviour
 
     void StartDash()
     {
+        //Parametros de dash activo
         isDashing = true;
         dashTime = Time.time + dashDuration;
         speed = dashSpeed;
+
+        //Traspasar colliders
+
+        Collider2D playerCollider = GetComponent<Collider2D>();
+        Collider2D[] objetosPasables = FindObjectsOfType<Collider2D>();
+
+        foreach (Collider2D obj in objetosPasables)
+        {
+            if (tagsPermitidos.Contains(obj.tag))
+            {
+                Physics2D.IgnoreCollision(playerCollider, obj, true);
+            }
+            Debug.Log("Reconoce Todos");
+        }
     }
 
     void StopDash()
     {
         isDashing = false;
         speed = originalSpeed;
-    } 
+
+        
+        Collider2D playerCollider = GetComponent<Collider2D>();
+        Collider2D[] objetosPasables = FindObjectsOfType<Collider2D>();
+
+        foreach (Collider2D obj in objetosPasables)
+        {
+            if (tagsPermitidos.Contains(obj.tag)) 
+            {
+                Physics2D.IgnoreCollision(playerCollider, obj, false);
+            }
+        }
+    }
 
 
     public void Attack()
@@ -118,27 +149,18 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("Attack");
 
             //reflejar sprite
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            //transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
         }
     }
-    //public void Flip()
-    //{
-    //    if (horizontalValue > 0 && sprt.flipX == true || horizontalValue < 0 && sprt.flipX == false)
-    //    {
-    //        sprt.flipX = !sprt.flipX;
-    //    }
-        
-    //}
+    
     private void OnDrawGizmos()
     {
-        // Verifica si groundCheck no es nulo
         if (groundCheck != null)
         {
-            // Establece el color del Gizmo (puedes cambiarlo si quieres)
             Gizmos.color = Color.red;
 
-            // Dibuja un círculo (WireSphere) en la posición de groundCheck con el radio de detección
+           
             Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         }
     }
