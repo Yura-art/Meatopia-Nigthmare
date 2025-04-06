@@ -31,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
     public float dashSpeed = 15f;
     public float dashDuration = 0.2f;
 
+    //Refereccias a otros Scripts
+
+    [SerializeField] CombatPvP combatPvP;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         originalSpeed = speed;
 
+        combatPvP = GetComponent<CombatPvP>();
     }
 
     void Update()
@@ -96,8 +101,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && horizontalValue != 0 && !isDashing)
         {
-            StartDash();
+            StartDash(); 
+            combatPvP.DashDamage();
         }
+       
+
     }
 
 
@@ -112,6 +120,9 @@ public class PlayerMovement : MonoBehaviour
 
         Collider2D playerCollider = GetComponent<Collider2D>();
         Collider2D[] objetosPasables = FindObjectsOfType<Collider2D>();
+
+        //Referencias a otro Script (Daño del dash)
+        //combatPvP.DashDamage();
 
         foreach (Collider2D obj in objetosPasables)
         {

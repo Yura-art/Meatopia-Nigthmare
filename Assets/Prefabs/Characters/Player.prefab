@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9052451814768403147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6602154069719565475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2184843108273864115}
+  m_Layer: 0
+  m_Name: DamageArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2184843108273864115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6602154069719565475}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.17, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9052451814768403147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7163133107877962932
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,7 +98,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7696304574834550039}
-  - {fileID: 8323525452955041191}
+  - {fileID: 2184843108273864115}
+  - {fileID: 8940524239625207447}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &769847855132678958
@@ -155,9 +187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7b35a2db98a8849b9e120d45d9d879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprt: {fileID: 0}
-  anim: {fileID: 0}
-  rb: {fileID: 0}
+  sprt: {fileID: 769847855132678958}
+  anim: {fileID: 6610013924420998946}
+  rb: {fileID: 5005307775798210797}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -165,9 +197,12 @@ MonoBehaviour:
   groundRadius: 0.5
   speed: 3
   jumpForce: 5
-  tagsPermitidos: []
+  tagsPermitidos:
+  - Passable
+  - Enemy
   dashSpeed: 15
   dashDuration: 0.2
+  combatPvP: {fileID: 904459075263842628}
 --- !u!70 &8870471614705639529
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -242,9 +277,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dffa49eadebc1604183512126c55e757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "da\xF1o": 0
-  radiumDamage: {fileID: 0}
---- !u!1 &7636301440368285623
+  damage: 5
+  dashdamage: 10
+  life: 100
+  damageArea: {fileID: 2184843108273864115}
+  attackRadius: 0.7
+  dashDamageArea: {fileID: 8940524239625207447}
+  dashAttackSize: {x: 1.5, y: 2}
+--- !u!1 &7760778178209258147
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,24 +292,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8323525452955041191}
+  - component: {fileID: 8940524239625207447}
   m_Layer: 0
-  m_Name: AttackControler
+  m_Name: DashDamageArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8323525452955041191
+--- !u!4 &8940524239625207447
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7636301440368285623}
+  m_GameObject: {fileID: 7760778178209258147}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -0.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
