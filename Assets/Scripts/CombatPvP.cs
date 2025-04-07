@@ -14,7 +14,7 @@ public class CombatPvP : MonoBehaviour
 
     public Transform damageArea;
     public float attackRadius;
-    
+
     public Transform dashDamageArea;
     public Vector2  dashAttackSize;
     
@@ -41,7 +41,8 @@ public class CombatPvP : MonoBehaviour
         {
             if (obj.CompareTag("Enemy"))
             {
-                obj.transform.GetComponent<Enemy1>().TakeDamage(damage);
+                //obj.transform.GetComponent<Enemy1>().TakeDamage(damage);
+                obj.transform.GetComponent<Enemy2>().TakeDamage(damage);
             }
         }
     }
@@ -55,6 +56,7 @@ public class CombatPvP : MonoBehaviour
             if (obj.CompareTag("Enemy"))
             {
                 obj.transform.GetComponent<Enemy1>().TakeDamage(damage * 2);
+                obj.transform.GetComponent<Enemy2>().TakeDamage(damage * 2);
             }
         }
     }
@@ -62,7 +64,7 @@ public class CombatPvP : MonoBehaviour
     public void TakeDamage(float damage)
     {
         life -= damage;
-        if (life < 0)
+        if (life <= 0)
         {
             Death();
         }
