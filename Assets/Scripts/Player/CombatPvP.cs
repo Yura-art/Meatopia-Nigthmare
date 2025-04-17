@@ -8,7 +8,7 @@ public class CombatPvP : MonoBehaviour
 
 
     [SerializeField] float damage = 5;
-    [SerializeField] float dashdamage;
+    private float dashDamage;
     [SerializeField] float life;
 
 
@@ -22,7 +22,7 @@ public class CombatPvP : MonoBehaviour
 
     void Start()
     {
-        dashdamage = damage * 2;
+        dashDamage = damage * 2;
     }
 
     // Update is called once per frame
@@ -42,7 +42,7 @@ public class CombatPvP : MonoBehaviour
             if (obj.CompareTag("Enemy"))
             {
                 //obj.transform.GetComponent<Enemy1>().TakeDamage(damage);
-                obj.transform.GetComponent<Enemy2>().TakeDamage(damage);
+                obj.transform.GetComponent<EnemyCombat>().TakeDamage(damage);
             }
         }
     }
@@ -55,8 +55,7 @@ public class CombatPvP : MonoBehaviour
         {
             if (obj.CompareTag("Enemy"))
             {
-                obj.transform.GetComponent<Enemy1>().TakeDamage(damage * 2);
-                obj.transform.GetComponent<Enemy2>().TakeDamage(damage * 2);
+                obj.transform.GetComponent<EnemyCombat>().TakeDamage(dashDamage);
             }
         }
     }
