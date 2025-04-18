@@ -157,7 +157,6 @@ public class Enemy2 : MonoBehaviour
                 CombatPvP player = obj.transform.GetComponent<CombatPvP>();
                 if (player != null)
                 {
-                    rb.velocity = Vector2.zero;
 
                     animator.SetTrigger("Attack");
                     player.TakeDamage(damage);
