@@ -18,12 +18,14 @@ public class GameUIManager : MonoBehaviour
     public void PauseGame()
     {
         pausePanel.SetActive(true);
+        inGameUIPanel.SetActive(false);
         Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
         pausePanel.SetActive(false);
+        inGameUIPanel.SetActive(true);
         Time.timeScale = 1;
     }
 
@@ -43,7 +45,7 @@ public class GameUIManager : MonoBehaviour
     public void ReturnToMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("UIMenu");
     }
 
     public void ExitGame()
