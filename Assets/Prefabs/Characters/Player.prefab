@@ -73,10 +73,8 @@ GameObject:
   - component: {fileID: 9052451814768403147}
   - component: {fileID: 769847855132678958}
   - component: {fileID: 6610013924420998946}
-  - component: {fileID: 7441734746725688191}
   - component: {fileID: 8870471614705639529}
   - component: {fileID: 5005307775798210797}
-  - component: {fileID: 904459075263842628}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -175,34 +173,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7441734746725688191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7163133107877962932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a7b35a2db98a8849b9e120d45d9d879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprt: {fileID: 769847855132678958}
-  anim: {fileID: 6610013924420998946}
-  rb: {fileID: 5005307775798210797}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  groundCheck: {fileID: 7696304574834550039}
-  groundRadius: 0.5
-  speed: 3
-  jumpForce: 5
-  tagsPermitidos:
-  - Passable
-  - Enemy
-  dashSpeed: 15
-  dashDuration: 0.2
-  combatPvP: {fileID: 904459075263842628}
 --- !u!70 &8870471614705639529
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -265,25 +235,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &904459075263842628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7163133107877962932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dffa49eadebc1604183512126c55e757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 50
-  dashdamage: 10
-  life: 100
-  damageArea: {fileID: 2184843108273864115}
-  attackRadius: 0.7
-  dashDamageArea: {fileID: 8940524239625207447}
-  dashAttackSize: {x: 1.5, y: 2}
 --- !u!1 &7760778178209258147
 GameObject:
   m_ObjectHideFlags: 0

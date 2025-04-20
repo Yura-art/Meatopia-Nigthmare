@@ -42,7 +42,7 @@ public class CombatPvP : MonoBehaviour
             if (obj.CompareTag("Enemy"))
             {
                 //obj.transform.GetComponent<Enemy1>().TakeDamage(damage);
-                obj.transform.GetComponent<Enemy2>().TakeDamage(damage);
+                obj.transform.GetComponent<EnemyCombat>().TakeDamage(damage);
             }
         }
     }
@@ -55,8 +55,8 @@ public class CombatPvP : MonoBehaviour
         {
             if (obj.CompareTag("Enemy"))
             {
-                obj.transform.GetComponent<Enemy1>().TakeDamage(damage * 2);
-                obj.transform.GetComponent<Enemy2>().TakeDamage(damage * 2);
+                obj.transform.GetComponent<EnemyCombat>().TakeDamage(damage);
+
             }
         }
     }
