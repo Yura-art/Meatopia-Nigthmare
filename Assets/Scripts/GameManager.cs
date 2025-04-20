@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
         if (Instancia == null)
         {
             Instancia = this;
-            DontDestroyOnLoad(gameObject); // Mantén el GameManager entre escenas si lo necesitas
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
