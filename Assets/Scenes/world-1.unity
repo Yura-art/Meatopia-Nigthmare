@@ -6212,8 +6212,8 @@ Transform:
   m_GameObject: {fileID: 1044841171}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 127.28702, y: -0.68213165, z: 10.069015}
-  m_LocalScale: {x: 18.777607, y: 3.044809, z: 1}
+  m_LocalPosition: {x: 66.5769, y: -0.68213165, z: 10.069015}
+  m_LocalScale: {x: 12.453309, y: 3.044809, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 242479294}
@@ -37073,7 +37073,7 @@ GameObject:
   - component: {fileID: 1864077270}
   - component: {fileID: 1864077269}
   m_Layer: 0
-  m_Name: Efecto de Sonido (bosque de noche)
+  m_Name: sonido ambiental
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
