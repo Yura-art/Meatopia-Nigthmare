@@ -14,6 +14,9 @@ public class EscalarBoton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private Color colorOriginal;
     private Image imagenBoton;
 
+    [Header("Sonido")]
+    public AudioSource sonidoHover; // Sonido que se reproduce al pasar el mouse
+
     void Start()
     {
         escalaOriginal = transform.localScale;
@@ -36,6 +39,9 @@ public class EscalarBoton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         if (imagenBoton != null)
             imagenBoton.color = colorHover;
+
+        if (sonidoHover != null && sonidoHover.clip != null)
+            sonidoHover.Play();
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -46,4 +52,3 @@ public class EscalarBoton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             imagenBoton.color = colorOriginal;
     }
 }
-
