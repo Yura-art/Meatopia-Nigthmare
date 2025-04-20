@@ -6,10 +6,10 @@ public class Enemy1 : MonoBehaviour
 {
 
     [SerializeField] float damage;
+    [SerializeField] float life;
 
     private Animator animator;
 
-    private Vector3 lastPosition;
 
 
     [SerializeField] float velocidad;
@@ -24,8 +24,6 @@ public class Enemy1 : MonoBehaviour
         {
             transform.position = Points[0].transform.position;
         }
-
-        lastPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -48,25 +46,31 @@ public class Enemy1 : MonoBehaviour
         }
     }
 
+
+    
+    public void TakeDamage(float damage)
+    {
+        life -= damage;
+
+        if (life <= 0)
+        {
+            Death();
+        }
+
+    }
+    
     
     public void Damage()
     {
 
     }
-    void Flip()
+    
+    
+    public void Death()
     {
-        Vector3 directionMovement = transform.position - lastPosition;
-
-        if (directionMovement.x > 0.01f)
-        {
-            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z); // Mira a la derecha
-        }
-        else if (directionMovement.x < -0.01f)
-        {
-            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z); // Mira a la izquierda
-        }
+        
+        
+            GameObject.Destroy(gameObject);
+        
     }
-
-
-
 }
