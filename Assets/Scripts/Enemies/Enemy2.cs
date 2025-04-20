@@ -7,7 +7,6 @@ public class Enemy2 : MonoBehaviour
 
 
     [SerializeField] float damage;
-    [SerializeField] float life;
 
     private Animator animator;
 
@@ -128,24 +127,22 @@ public class Enemy2 : MonoBehaviour
 
     private void BackState()
     {
-        if (transform.position.x < initialPoint.x)
+        float distance = Vector2.Distance(transform.position, initialPoint);
+
+        if (distance > 0.1f)
         {
-            rb.velocity = new Vector2(velocidad, rb.velocity.y);
+            float direction = Mathf.Sign(initialPoint.x - transform.position.x);
+            rb.velocity = new Vector2(velocidad * direction, rb.velocity.y);
+            FlipToTarget(initialPoint);
         }
         else
-        {
-            rb.velocity = new Vector2(-velocidad, rb.velocity.y);
-        }
-
-        FlipToTarget(initialPoint);
-
-        if (Vector2.Distance(transform.position, initialPoint) < 0.1f)
         {
             rb.velocity = Vector2.zero;
             animator.SetBool("IsRunning", false);
             actualState = MovementStates.Wait;
         }
     }
+
 
     public void Hit()
     {
