@@ -8,11 +8,9 @@ public class Bullet : MonoBehaviour
 
     public float bulletDamage;
 
-    public Animator animator;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -25,7 +23,6 @@ public class Bullet : MonoBehaviour
         {
             playerLife.TakeDamage(bulletDamage);
 
-            animator.SetTrigger("Shatter");
             Destroy(gameObject);
         }
     }
