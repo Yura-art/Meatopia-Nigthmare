@@ -4984,6 +4984,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 519049866775356754, guid: c5c181ebdcbbfb94a9ea918c09dac65f, type: 3}
   m_PrefabInstance: {fileID: 709409903}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &709409907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7163133107877962932, guid: c5c181ebdcbbfb94a9ea918c09dac65f, type: 3}
+  m_PrefabInstance: {fileID: 709409903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!50 &709409908 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5005307775798210797, guid: c5c181ebdcbbfb94a9ea918c09dac65f, type: 3}
@@ -39523,6 +39528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2090791686}
   - component: {fileID: 2090791687}
+  - component: {fileID: 2090791688}
   m_Layer: 0
   m_Name: Video
   m_TagString: Untagged
@@ -39581,6 +39587,20 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &2090791688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090791685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48315a4e418a4244488e0a7b5f92a71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 709409907}
+  video: {fileID: 2055869392}
 --- !u!1 &2098849820
 GameObject:
   m_ObjectHideFlags: 0
