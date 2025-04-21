@@ -4877,6 +4877,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8032494135935180852, guid: c5c181ebdcbbfb94a9ea918c09dac65f, type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 29214610}
+    - target: {fileID: 8032494135935180852, guid: c5c181ebdcbbfb94a9ea918c09dac65f, type: 3}
       propertyPath: damageArea
       value: 
       objectReference: {fileID: 709409906}
@@ -35848,7 +35852,7 @@ Transform:
   m_GameObject: {fileID: 1591539688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7046156, y: 1.1200004, z: -10}
+  m_LocalPosition: {x: -6.709114, y: 1.1200004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37945,7 +37949,7 @@ Transform:
   m_GameObject: {fileID: 1856913713}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7046156, y: 1.1200004, z: -10}
+  m_LocalPosition: {x: -6.709114, y: 1.1200004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
