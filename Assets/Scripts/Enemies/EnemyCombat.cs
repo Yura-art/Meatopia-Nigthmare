@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyCombat : MonoBehaviour
 {
 
+
     [SerializeField] float life;
     private Animator animator;
     private Collider2D collider2d;
@@ -18,7 +19,7 @@ public class EnemyCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TakeDamage(float damage)
