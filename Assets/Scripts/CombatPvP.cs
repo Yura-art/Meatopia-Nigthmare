@@ -18,7 +18,7 @@ public class CombatPvP : MonoBehaviour
     public Transform dashDamageArea;
     public Vector2  dashAttackSize;
 
-    public GameObject panel;
+    public GameObject panel, paneliu;
 
     void Start()
     {
@@ -74,7 +74,8 @@ public class CombatPvP : MonoBehaviour
     public void Death()
     {
 
-        GameObject.Destroy(gameObject);
+        paneliu.gameObject.SetActive(false);
+
         panel.gameObject.SetActive(true);
     }
     private void OnDrawGizmos()
