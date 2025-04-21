@@ -9,21 +9,36 @@ public class CombatPvP : MonoBehaviour
 
     [SerializeField] float damage = 5;
     [SerializeField] float dashdamage;
-    [SerializeField] float life;
+    [SerializeField] public float life;
+
+    [SerializeField] private VidaUIManager vidaUIManager;
+
 
 
     public Transform damageArea;
     public float attackRadius;
 
     public Transform dashDamageArea;
-    public Vector2  dashAttackSize;
+    public Vector2 dashAttackSize;
 
     public GameObject panel, paneliu;
 
     void Start()
     {
         dashdamage = damage * 2;
+
+        if (vidaUIManager == null)
+        {
+            vidaUIManager = FindObjectOfType<VidaUIManager>();
+        }
+
+        if (vidaUIManager != null)
+        {
+            vidaUIManager.InicializarCorazones();
+        }
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -36,7 +51,7 @@ public class CombatPvP : MonoBehaviour
 
     public void Damage()
     {
-        Collider2D[] objects = Physics2D.OverlapCircleAll(damageArea.position,attackRadius);
+        Collider2D[] objects = Physics2D.OverlapCircleAll(damageArea.position, attackRadius);
         foreach (Collider2D obj in objects)
         {
             if (obj.CompareTag("Enemy"))
@@ -46,7 +61,9 @@ public class CombatPvP : MonoBehaviour
             }
         }
     }
-    
+
+
+
     public void DashDamage()
     {
 
@@ -60,17 +77,19 @@ public class CombatPvP : MonoBehaviour
             }
         }
     }
-    
+
     public void TakeDamage(float damage)
     {
         life -= damage;
+        vidaUIManager.QuitarCorazon();
+
         if (life <= 0)
         {
             Death();
         }
     }
-    
-    
+
+
     public void Death()
     {
 
