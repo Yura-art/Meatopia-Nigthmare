@@ -18,11 +18,13 @@ public class CombatPvP : MonoBehaviour
     public Transform dashDamageArea;
     public Vector2  dashAttackSize;
     
-
-
+   private Animator animator;
+    public GameObject panelGameOver;
     void Start()
     {
         dashdamage = damage * 2;
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -74,7 +76,8 @@ public class CombatPvP : MonoBehaviour
     public void Death()
     {
 
-        GameObject.Destroy(gameObject);
+        animator.SetTrigger("Death");
+        panelGameOver.SetActive(true);
 
     }
     private void OnDrawGizmos()
