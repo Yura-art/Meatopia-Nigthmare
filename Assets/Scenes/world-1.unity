@@ -2939,6 +2939,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8290622332691846355, guid: f5e11ecaa73d275408c86d5fd36a7061, type: 3}
   m_PrefabInstance: {fileID: 379640404}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &397188961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 397188963}
+  - component: {fileID: 397188962}
+  m_Layer: 0
+  m_Name: PanelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &397188962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397188961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbbe7e5dd8810d4289a0452f544ae5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelPausa: {fileID: 0}
+  panelGameover: {fileID: 0}
+  panelJuego: {fileID: 478036112}
+--- !u!4 &397188963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397188961}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 202.37357, y: 101.795975, z: 11.042563}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1361155801}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &404353468
 GameObject:
   m_ObjectHideFlags: 0
@@ -4594,7 +4641,7 @@ PrefabInstance:
     - target: {fileID: 2661102757818274515, guid: c5c181ebdcbbfb94a9ea918c09dac65f, type: 3}
       propertyPath: combatPvP
       value: 
-      objectReference: {fileID: 1728907403}
+      objectReference: {fileID: 0}
     - target: {fileID: 2661102757818274515, guid: c5c181ebdcbbfb94a9ea918c09dac65f, type: 3}
       propertyPath: jumpForce
       value: 5
@@ -4643,10 +4690,6 @@ PrefabInstance:
       propertyPath: attackRadius
       value: 0.58
       objectReference: {fileID: 0}
-    - target: {fileID: 8032494135935180852, guid: c5c181ebdcbbfb94a9ea918c09dac65f, type: 3}
-      propertyPath: panelGameOver
-      value: 
-      objectReference: {fileID: 29214610}
     - target: {fileID: 8032494135935180852, guid: c5c181ebdcbbfb94a9ea918c09dac65f, type: 3}
       propertyPath: dashDamageArea
       value: 
@@ -33968,6 +34011,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1301837606}
+  - {fileID: 397188963}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1377005193
@@ -35531,7 +35575,7 @@ Transform:
   m_GameObject: {fileID: 1591539688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7426596, y: 0.714633, z: -10}
+  m_LocalPosition: {x: -6.709114, y: 0.714633, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36856,17 +36900,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2278912218629602598, guid: 4bc6edd3ff91b7c4fae3ae1ee5d6f175, type: 3}
   m_PrefabInstance: {fileID: 1715471862}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1728907403 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8032494135935180852, guid: c5c181ebdcbbfb94a9ea918c09dac65f, type: 3}
-  m_PrefabInstance: {fileID: 709409903}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dffa49eadebc1604183512126c55e757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1731674459
 GameObject:
   m_ObjectHideFlags: 0
@@ -37639,7 +37672,7 @@ Transform:
   m_GameObject: {fileID: 1856913713}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7426596, y: 0.714633, z: -10}
+  m_LocalPosition: {x: -6.709114, y: 0.714633, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
